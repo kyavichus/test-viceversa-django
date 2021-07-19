@@ -8,9 +8,10 @@
 
 <h1>VICE VERSA</h1>
 
-<form action="textarea1.py" method="post">
+<form action="{%url 'reverse' %}">
+    {% csrf_token %}
     <p><b>Input your text</b></p>
-    <p><textarea rows="10" cols="45" name="text"></textarea></p>
+    <p><textarea rows="10" cols="45" name="usertext"></textarea></p>
     <br><br>
     <p><input type="submit" value="REVERSE"></p>
 </form>
